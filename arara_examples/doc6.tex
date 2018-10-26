@@ -1,0 +1,12 @@
+% arara: pdflatex until !found('log', 'undefined references')
+\documentclass{article}
+
+\begin{document}
+
+\section{My section}
+\label{sec:ms}
+
+Hello from Section~\ref{sec:ms}!
+% Error generado: Can't use callbacks without +clientserver
+
+\end{document}
