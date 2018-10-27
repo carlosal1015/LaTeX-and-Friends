@@ -13,10 +13,18 @@
 
 %\usepackage[no-math]{fontspec}
 \usepackage{fontspec}
-\usepackage{polyglossia}
-\setmainlanguage{spanish}
 \usepackage{roboto}
 
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+
+\usepackage{kmath}
+\usepackage[T1]{fontenc}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{listings}
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%
@@ -80,6 +88,8 @@
 \definecolor{matblue}{HTML}{2196F3}
 \definecolor{matbluelight}{HTML}{BBDEFB}
 \definecolor{matbluedark}{HTML}{1976D2}
+% arara colors
+\definecolor{araracolour}{rgb}{0, 0.72, 0.28}
 
 \setbeamercolor{structure}{fg = matbluedark}
 %\setbeamercolor{frametitle}{parent=subsection in head/foot}
@@ -210,5 +220,3 @@
 \end{beamercolorbox}
 %\setbeamercolor{postit}{fg=sapred}
 }
-
-
