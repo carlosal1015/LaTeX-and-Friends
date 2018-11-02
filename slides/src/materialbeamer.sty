@@ -21,10 +21,6 @@
 \usepackage{kmath}
 \usepackage[T1]{fontenc}
 
-\usepackage{tcolorbox}
-\tcbuselibrary{skins}
-\tcbuselibrary{breakable}
-\tcbuselibrary{listings}
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%
@@ -127,6 +123,10 @@
 
 \usepackage{tcolorbox}  
 \tcbuselibrary{skins}                                  %  preamble 
+%%%%%%%%%%%
+\tcbuselibrary{breakable}
+\tcbuselibrary{listings}
+%%%%%%%%%%
 \usepackage{tikz}                                      %
 \usetikzlibrary{shadows,shadings}                      %
 
@@ -220,3 +220,55 @@
 \end{beamercolorbox}
 %\setbeamercolor{postit}{fg=sapred}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcblisting{codebox}[4]{
+	adjusted title=#1,
+	adjusted title after break={\centering #1 (ctd.)},
+	halign title=center,
+	fonttitle=\bfseries\sffamily,
+	enhanced,
+	drop lifted shadow,
+	colback=#2!5,
+	colframe=#2,
+	breakable,
+	overlay={#3{#2}},
+	toptitle=0.2em,
+	bottomtitle=.2em,
+	coltitle=#4,
+	before skip=1em,
+	left=8mm,
+	listing only,
+	listing options={
+		numbers=left,
+		numberstyle=\scriptsize\sffamily\color{#2},
+		basicstyle=\footnotesize\ttfamily,
+	},
+	after skip=1.4em
+}
+\newcommand{\icnote}[1]{%
+	\begin{scope}[
+		y=0.80pt,
+		x=0.80pt,
+		yscale=-1.000000,
+		xscale=1.000000,
+		inner sep=0pt,
+		outer sep=0pt,
+		shift={([xshift=0.35em, yshift=0.31em]frame.north west)},
+		scale=.11
+		]
+		
+		\path[fill=#1!5] (104.4280,104.4280) circle (2.9472cm);
+		\begin{scope}[shift={(-46.08801,-45.37)}]
+			\path[fill=#1] (113.9190,187.9100) -- (127.1980,200.4160) --
+			(109.7220,205.6600) -- (92.2560,210.9060) -- (96.4470,193.1470) --
+			(100.6380,175.3930) -- cycle;
+			\path[fill=#1] (133.3760,194.1100) -- (106.7160,169.1000) --
+			(182.1210,88.6910) -- (208.7790,113.7040) -- cycle;
+		\end{scope}
+	\end{scope}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\araratext}[1]{{\normalfont\fontfamily{fco}\selectfont\color{araracolour}\bfseries#1}}
+\newcommand*\arara{\araratext{ar\kern-.03emar\kern-.03ema}}
