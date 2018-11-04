@@ -1,10 +1,13 @@
 % arara: xelatex
-% arara: clean: {extensions: ['log','out','snm']}
+% arara: sage
+% arara: xelatex
+% arara: clean: {extensions: ['log','out','snm','listing','nav','sage']}
 \documentclass[spanish,9pt]{beamer}
 \usepackage{euler}
 \usepackage{graphicx,hyperref,url, materialbeamer}
 \usepackage{braket}
 \usepackage{listings}
+\usepackage{sagetex}
 
 \graphicspath{ {../img/} }
 \setbeamercovered{transparent}
@@ -34,27 +37,20 @@
 
 % Optional: a subtitle to be dispalyed on the title slide
 \subtitle{SageMath, arara, PSTricks \& knitr\\[\baselineskip]
-27 de octubre del 2018}
+10 de noviembre del 2018}
 
 % The author(s) of the presentation:
 %  - again first a short version to be displayed at the bottom;
 %  - next the full list of authors, which may include contact information;
 \author[Dimension R]{Carlos Aznarán} 
-  
-%\titlegraphic{\includegraphics[width=\textwidth]{atac-logo}}
 
-% The institute:
-%  - to start the name of the university as displayed on the top of each slide
-%    this can be adjusted such that you can also create a Dutch version
-%  - next the institute information as displayed on the title slide
+%\titlegraphic{\includegraphics[width=\textwidth]{usa}}
+
 \institute[Universidad Nacional de Ingeniería]{
 Matemáticas\\
   Facultad de Ciencias\\
   Universidad Nacional de Ingeniería}
 
-% Add a date and possibly the name of the event to the slides
-%  - again first a short version to be shown at the bottom of each slide
-%  - second the full date and event name for the title slide
 \date[\today]{
  \today}
 
@@ -63,7 +59,7 @@ Matemáticas\\
  \providecommand*{\pder}[3][]{% 
     \frac{\partial\if?#1?\else^{#1}\fi#2}{\partial #3\if?#1?\else^{#1}\fi}% 
   }
-
+\renewcommand{\sin}{\mathrm{sen}}
 \begin{document}
 
 \begin{frame}
@@ -87,10 +83,10 @@ Matemáticas\\
 \setbeamercolor{normal text}{fg=white}
 \begin{frame}[plain, b]
 \centering
-\huge \textcolor{white}{¡Gracias!}
+\huge \textcolor{white}{¡Gracias por venir!}
 \normalsize
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{Dimensión_R_Logo}	\\
+	\includegraphics[width=0.5\textwidth]{Dimensión_R_Logo}\\
 \end{center}
 \vspace*{\fill}
 

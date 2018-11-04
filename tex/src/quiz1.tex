@@ -1,0 +1,139 @@
+% arara: pdflatex: {shell: yes}
+\documentclass[spanish,addpoints,answers,a4paper]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\spanishdatedel
+\usepackage{amsmath,amsthm}
+\usepackage[cmintegrals]{newtxmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\usepackage{multicol}
+
+\graphicspath{ {../img/} }
+\pagestyle{empty}
+
+\usepackage{minted}
+\usepackage{hyperref}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
+\renewcommand\listingscaption{Listado}
+\newcommand{\unmarkedfntext}[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\spanishdatedel
+\decimalpoint
+
+\def\DIMENSIONR{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-10.5,-1.5) {\includegraphics[height=3cm]{DimensionR}}
+	\end{picture}
+}
+
+\newcommand{\mychar}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{Octocat.png}%
+	\endgroup
+}
+
+\newcommand{\finland}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{finland}%
+	\endgroup
+}
+
+\newcommand{\usa}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{usa}%
+	\endgroup
+}
+
+\newcommand{\tf}[1][{}]{%
+	\fillin[#1][0.25in]%
+}
+
+\begin{document}
+
+{\centering
+	\sffamily\bfseries\scshape
+\LARGE Taller \LaTeX\ \& friends\DIMENSIONR
+\par}
+
+\begin{flushright}\sffamily\bfseries\large
+Temas: GNU/Linux, lenguajes de programación, Git \& \LaTeX
+\end{flushright}
+
+\vspace{1.2cm}
+\noindent
+\makebox[\textwidth]{Nombres y apellidos:\enspace\hrulefill}
+%\makebox[\textwidth]{Nombres y apellidos:\enspace Franz Victorio Malqui.\hfill}
+\
+
+\begin{questions}
+\question Escriba verdadero (T) o falso (F) en cada una de las siguientes proposiciones:
+
+\begin{multicols}{2}
+\begin{parts}
+	\part \tf Linux es un sistema operativo. %F
+	\part \tf \mintinline{bash}{#!/bin/bash} es llamado \emph{shebang}. %F
+	\part \tf En \LaTeX{}, \mintinline{tex}{\left]a,b\right[} imprime $\left]a,b\right[$.%T
+	\part \tf En \texttt{UNIX}, \mintinline{bash}{mv} se puede usar para renombrar un archivo o directorio. %T
+	\part \tf En \LaTeX{}, \mintinline{tex}{"Mi OS favorito es Deepin"} imprime ``Mi OS favorito es Deepin''. %F
+\end{parts}
+\end{multicols}
+
+\question ¿A quién(es) se le atribuye la invención de Git?
+\begin{multicols}{2}
+\begin{checkboxes}
+	\choice Linus Benedict Torvalds.\ \finland{} %C
+	\choice Ken Lane Thompson.\ \usa{}
+	\choice Ian Ashley Murdock.\ \usa{}
+	\choice Richard Matthew Stallman.\ \usa{}
+\end{checkboxes}
+\end{multicols}
+
+\question ¿Qué comando debe usar para inicializar un nuevo repositorio en Git?
+
+\begin{multicols}{4}
+\begin{checkboxes}
+	\choice \mintinline{bash}{git bash}
+	\choice \mintinline{bash}{git install}
+	\choice \mintinline{bash}{git init} %C
+	\choice \mintinline{bash}{git start}
+\end{checkboxes}
+\end{multicols}
+
+\question ¿Cuál es la salida del siguiente fragmento de código?
+
+\begin{minted}[linenos]{c}
+#include <stdio.h>
+main()
+{
+	for()printf("Dimension R");
+}
+\end{minted}
+\makeemptybox{0.5in}
+
+
+\question Realice los operaciones y muestre la salida del siguiente fragmento de código en Python:
+\begin{minted}[mathescape,breaklines]{python}
+import numpy as np
+A = 2*np.eye(3) # $A = \left(\begin{smallmatrix}2 0 0 \\ 0 2 0 \\ 0 0 2\end{smallmatrix}\right)$.
+B = 5*np.ones(3) # $B = \left(\begin{smallmatrix}5  5  5\end{smallmatrix}\right)$.
+print(A @ B)
+\end{minted}
+
+\makeemptybox{1.2in}
+
+\end{questions}
+\vfill
+\begin{flushright}\bfseries
+Centro de Recursos para el Aprendizaje y la Investigación (CRAI)\\[2mm]
+\today\unmarkedfntext{Código disponible en \href{https://github.com/carlosal1015/LaTeX-and-friends}{\mychar{}}.}
+\end{flushright}
+
+\end{document}
