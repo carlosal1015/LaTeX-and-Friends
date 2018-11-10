@@ -1,0 +1,15 @@
+!config
+authors:
+- cis
+- Oromion
+arguments:
+- flag: <arara> @{parameters.action}
+  identifier: action
+- default: <arara> @{getBasename(file)}.sagetex.sage
+  flag: <arara> @{parameters.sagefile}
+  identifier: sagefile
+commands:
+- command: <arara> sage @{action} @{sagefile}
+  name: SAGE 8.4 engine
+identifier: sage
+name: SAGE
