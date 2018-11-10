@@ -14,47 +14,39 @@
 
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
 
-\title[\LaTeX{} \& Friends]{\LaTeX{} \& friends}
+\title[\LaTeX{} \& friends]{\LaTeX{} \& friends}
 
-% Optional: a subtitle to be dispalyed on the title slide
-\subtitle{SageMath, arara, PSTricks \& knitr\\[\baselineskip]
+\subtitle{SageMath, \arara, PSTricks \& knitr\\[\baselineskip]
 10 de noviembre del 2018}
 
-% The author(s) of the presentation:
-%  - again first a short version to be displayed at the bottom;
-%  - next the full list of authors, which may include contact information;
 \author[Dimension R]{Carlos Aznarán} 
 
-%\titlegraphic{\includegraphics[width=\textwidth]{usa}}
+\institute[Universidad Nacional de Ingeniería]{Matemáticas\\
+Facultad de Ciencias\\
+Universidad Nacional de Ingeniería}
 
-\institute[Universidad Nacional de Ingeniería]{
-Matemáticas\\
-  Facultad de Ciencias\\
-  Universidad Nacional de Ingeniería}
-
-\date[\today]{
- \today}
+\date[\today]{\today}
 
 \providecommand{\di}{\mathop{}\!\mathrm{d}}
 \providecommand*{\der}[3][]{\frac{d\if?#1?\else^{#1}\fi#2}{d #3\if?#1?\else^{#1}\fi}} 
- \providecommand*{\pder}[3][]{% 
-    \frac{\partial\if?#1?\else^{#1}\fi#2}{\partial #3\if?#1?\else^{#1}\fi}% 
-  }
+\providecommand*{\pder}[3][]{
+	\frac{\partial\if?#1?\else^{#1}\fi#2}{\partial #3\if?#1?\else^{#1}\fi}% 
+}
 \renewcommand{\sin}{\mathrm{sen}}
+
 \begin{document}
 
 \begin{frame}
-  \titlepage
+\titlepage
 \end{frame}
 
 \begin{frame}
-  \frametitle{\contentsname}
-
-  \tableofcontents
+\frametitle{\contentsname}
+\tableofcontents
 \end{frame}
 
 \input{./sections/2_arara}
-%\input{datamodel}
+\input{./sections/2_sage}
 %\input{architechture}
 %\input{implementation}
 %\input{consistency}
@@ -62,7 +54,7 @@ Matemáticas\\
 
 \setbeamercolor{background canvas}{bg=matbluedark}
 \setbeamercolor{normal text}{fg=white}
-\begin{frame}[plain, b]
+\begin{frame}[plain,b]
 \centering
 \huge \textcolor{white}{¡Gracias por venir!}
 \normalsize
@@ -71,11 +63,10 @@ Matemáticas\\
 \end{center}
 \vspace*{\fill}
 
- \begin{beamercolorbox}[wd=\paperwidth]{section in head/foot}
- \centering\large
-\LaTeX{} \& friends -- con el soporte de Dimension R
+\begin{beamercolorbox}[wd=\paperwidth]{section in head/foot}
+\centering\large
+\LaTeX{} \& friends -- con el soporte de Dimension R.
 \vskip10pt
 \end{beamercolorbox}
- \end{frame}
-
+\end{frame}
 \end{document}
