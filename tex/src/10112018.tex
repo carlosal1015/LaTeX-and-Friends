@@ -1,7 +1,7 @@
 % arara: xelatex
 % arara: sage
 % arara: xelatex
-% arara: clean: {extensions: ['log','out','snm','listing','nav','sage']}
+% arara: clean: {extensions: ['log','out','snm','listing','nav','sagetex.sage','sagetex.sage.py','sagetex.scmd','sagetex.sout','toc','vrb']}
 \documentclass[spanish,9pt]{beamer}
 \usepackage{euler}
 \usepackage{graphicx,hyperref,url, materialbeamer}
@@ -11,28 +11,9 @@
 
 \graphicspath{ {../img/} }
 \setbeamercovered{transparent}
-\lstdefinestyle{customsql}{
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  xleftmargin=\parindent,
-  language=SQL,
-  showstringspaces=false,
-  basicstyle=\footnotesize\ttfamily,
-  keywordstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{purple!40!black},
-  identifierstyle=\color{blue},
-  stringstyle=\color{orange},
-}
-\lstset{escapechar=@,style=customsql}
-
-
 
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
-%\usefonttheme{serif}
 
-% The title of the presentation:
-%  - first a short version which is visible at the bottom of each slide;
-%  - second the full title shown on the title slide;
 \title[\LaTeX{} \& Friends]{\LaTeX{} \& friends}
 
 % Optional: a subtitle to be dispalyed on the title slide
@@ -86,7 +67,7 @@ Matemáticas\\
 \huge \textcolor{white}{¡Gracias por venir!}
 \normalsize
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{Dimensión_R_Logo}\\
+	\includegraphics[width=0.5\textwidth]{DimensionR}\\
 \end{center}
 \vspace*{\fill}
 
