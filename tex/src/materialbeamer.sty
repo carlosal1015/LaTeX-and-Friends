@@ -20,7 +20,7 @@
 
 \usepackage{kmath}
 \usepackage[T1]{fontenc}
-
+%\usepackage{coloremoji}
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%
@@ -269,4 +269,12 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\araratext}[1]{{\normalfont\fontfamily{fco}\selectfont\color{araracolour}\bfseries#1}}
+\newcommand{\araratextwhite}[1]{{\normalfont\fontfamily{fco}\selectfont\color{white}\bfseries#1}}
 \newcommand*\arara{\araratext{ar\kern-.03emar\kern-.03ema}}
+\newcommand*\ararawhite{\araratextwhite{ar\kern-.03emar\kern-.03ema}}
+\definecolor{gitcolor}{HTML}{F44D27}
+\definecolor{hangoutscolor}{HTML}{0F9D58}
+\definecolor{sagecolor}{HTML}{3131FF}
+\providecommand{\git}{\textcolor{gitcolor}{\bfseries git}}
+\providecommand{\hangouts}{\textcolor{hangoutscolor}{\bfseries Hangouts}}
+\providecommand{\sage}{\textcolor{sagecolor}{\bfseries Sage}}
