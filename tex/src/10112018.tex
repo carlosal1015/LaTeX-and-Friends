@@ -1,13 +1,14 @@
+% arara: clean: {extensions: ['log','out','aux','snm','listing','nav','sagetex.sage','sagetex.sage.py','sagetex.scmd','sagetex.sout','toc','vrb']}
 % arara: xelatex
 % arara: sage
 % arara: xelatex
-% arara: clean: {extensions: ['log','out','snm','listing','nav','sagetex.sage','sagetex.sage.py','sagetex.scmd','sagetex.sout','toc','vrb']}
+% arara: clean: {extensions: ['log','out','aux','snm','listing','nav','sagetex.sage','sagetex.sage.py','sagetex.scmd','sagetex.sout','toc','vrb']}
 \documentclass[spanish,9pt]{beamer}
 \usepackage{euler}
+\usepackage{sagetex}
 \usepackage{graphicx,hyperref,url, materialbeamer}
 \usepackage{braket}
 \usepackage{listings}
-\usepackage{sagetex}
 
 \graphicspath{ {../img/} }
 \setbeamercovered{transparent}
@@ -45,18 +46,24 @@ Universidad Nacional de Ingeniería}
 \tableofcontents
 \end{frame}
 
-\input{./sections/2_arara}
-\input{./sections/2_sage}
+\input{./sections/2_1_arara}
+%\input{./sections/2_sage}
 %\input{architechture}
 %\input{implementation}
 %\input{consistency}
 %\input{workload}
 
+%\input{./sections/1_1_firststeps}
+%\input{./sections/1_2_objectives}
+%\input{./sections/1_3_Installation}
+%\input{./sections/1_4_resume}
+
 \setbeamercolor{background canvas}{bg=matbluedark}
 \setbeamercolor{normal text}{fg=white}
+
 \begin{frame}[plain,b]
 \centering
-\huge \textcolor{white}{¡Gracias por venir!}
+\huge \textcolor{white}{¡Gracias por su atención!}
 \normalsize
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{DimensionR}\\
@@ -64,9 +71,10 @@ Universidad Nacional de Ingeniería}
 \vspace*{\fill}
 
 \begin{beamercolorbox}[wd=\paperwidth]{section in head/foot}
-\centering\large
-\LaTeX{} \& friends -- con el soporte de Dimension R.
-\vskip10pt
+	\centering\large
+	\LaTeX{} \& friends -- con el soporte de Dimension R.
+	\vskip10pt
 \end{beamercolorbox}
 \end{frame}
+
 \end{document}
