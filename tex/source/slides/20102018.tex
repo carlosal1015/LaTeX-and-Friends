@@ -1,3 +1,4 @@
+% arara: clean: {extensions: ['log','out','snm','vrb','fdb_latexmk','fls','nav','aux','toc']}
 % arara: xelatex
 % arara: xelatex
 % arara: clean: {extensions: ['log','out','snm','vrb','fdb_latexmk','fls','nav','aux','toc']}
@@ -7,17 +8,17 @@
 \usepackage{braket}
 \usepackage{listings}
 
-\graphicspath{ {../img/} }
+\graphicspath{ {./img/} }
 \setbeamercovered{transparent}
 
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
 
-\title[\LaTeX{} \& friends]{\LaTeX{} \& friends}
+\title[\LaTeX{} \& friends]{\LaTeX{} \& friends}%\\[\baselineskip]
 
-\subtitle{SageMath, \ararawhite, PSTricks \& knitr\\[\baselineskip]
+\subtitle{\sagewhite, \ararawhite, PSTricks \& knitr\\[\baselineskip]
 20 de octubre del 2018}
 
-\author[Dimension R]{Carlos Aznarán}
+\author[Dimension R]{Oromion Aznarán}
 
 \institute[Universidad Nacional de Ingeniería]{Matemáticas\\
 Facultad de Ciencias\\

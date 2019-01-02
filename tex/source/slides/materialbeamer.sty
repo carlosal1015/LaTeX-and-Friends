@@ -11,29 +11,31 @@
 %
 % See the file doc/licenses/LICENSE for more details.
 
-%\usepackage[no-math]{fontspec}
 \usepackage{fontspec}
+%\defaultfontfeatures{Ligatures=TeX}
 \usepackage{roboto}
+\setsansfont{Roboto}
+\usepackage[T1]{fontenc}
 
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
 
 \usepackage{kmath}
-\usepackage[T1]{fontenc}
+
 %\usepackage{coloremoji}
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%
-
+%
 % Layout scheme for outer elements: split header and footer
 %\useoutertheme{split}
-
+%
 % Color scheme for outer elements: use background colors
 %\usecolortheme{whale}
-
+%
 % Layout scheme for inner elements: rounded elements
 %\useinnertheme{rounded} 
-
+%
 % Color scheme for inner elements: use foreground colors
 %\usecolortheme{orchid}
 
@@ -278,3 +280,4 @@
 \providecommand{\git}{\textcolor{gitcolor}{\bfseries git}}
 \providecommand{\hangouts}{\textcolor{hangoutscolor}{\bfseries Hangouts}}
 \providecommand{\sage}{\textcolor{sagecolor}{\bfseries Sage}}
+\providecommand{\sagewhite}{\textcolor{white}{\bfseries Sage}}
